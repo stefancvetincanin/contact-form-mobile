@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+    <script src="bootstrap/jquery-3.3.1.min.js"></script>
+    <!-- Popper -->
+    <script src="bootstrap/popper.min.js"></script>
+    <!-- BOOTSTRAP .css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.min.css" />
+    <!-- BOOTSTRAP .js -->
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <!-- Our sources -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        <div class="form-header">
+            <div class="prva-kolona">
+
+            </div>
+            <div class="druga-kolona">
+                <p>New York State</p>
+                <h1>Request for Contact</h1>
+            </div>
+        </div>
+        <div class="form-body">
+            <div class="prva-kolona">
+
+            </div>
+            <div class="druga-kolona">
+                <label for="name">First Name</label>
+                <input type="text" id="name" placeholder="First Name">
+                <hr>
+                <label for="surname">Last Name</label>
+                <input type="text" id="surname" placeholder="Last Surname">
+                <hr>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Email Address">
+                <hr>
+                <p>What is the best time to contact you?</p>
+                <input type="checkbox" name="contact-time" value="monday" id="check-monday">
+                <label for="check-monday" class="lbl-check">Monday 3pm</label><br>
+                <input type="checkbox" name="contact-time" value="tuesday" id="check-tuesday">
+                <label for="check-tuesday" class="lbl-check">Tuesday 3pm</label>
+            </div>
+        </div>
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

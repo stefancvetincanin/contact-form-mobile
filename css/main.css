@@ -1,0 +1,76 @@
+* {
+    font-family: "Roboto";
+}
+
+.form-header, .form-body {
+    display: flex;
+}
+
+.form-header {
+    padding: 20px 0 30px;
+    color: white;
+    background-color: #2196f3;
+    
+}
+
+.form-header p {
+    margin-bottom: 0px;
+}
+
+.form-header h1 {
+    font-size: 25px;
+}
+
+.prva-kolona {
+    flex-basis: 20%;
+}
+
+.druga-kolona {
+    flex-basis: 80%;
+}
+
+.form-body {
+    padding-top: 20px;
+    padding-right: 15px;
+    color: #c7c7c7;
+    background-color: #fafafa;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+.lbl-check {
+    color: #9a8675;
+}
+
+input[type=text], input[type=email] {
+    background-color: #fafafa;
+    display: block;
+    border-width: 0px;
+    width: 100%;
+    border-radius: 0px;
+
+}
+
+input[type=text]:active, input[type=email]:active {
+    /* border: 0px solid black; */
+}
+
+hr {
+    width: 100%;
+    margin: 8px 0 30px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #9b9b9c;
+    opacity: 1; /* Firefox */
+}
+
+.form-body p {
+    color: #9b9b9c;
+}
+
+input[type=checkbox] {
+    margin-right: 12px;
+}

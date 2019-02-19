@@ -7,7 +7,7 @@
 }
 
 .form-header {
-    padding: 20px 0 30px;
+    padding: 25px 0 25px;
     color: white;
     background-color: #2196f3;
     
@@ -47,14 +47,12 @@ label {
 input[type=text], input[type=email] {
     background-color: #fafafa;
     display: block;
-    border-width: 0px;
+    /* border-width: 0px; */
     width: 100%;
-    border-radius: 0px;
+    /* border-radius: 0px; */
+    border: none;
+    border-color: transparent;
 
-}
-
-input[type=text]:active, input[type=email]:active {
-    /* border: 0px solid black; */
 }
 
 hr {
@@ -73,4 +71,23 @@ hr {
 
 input[type=checkbox] {
     margin-right: 12px;
+}
+
+#check-tuesday {
+    margin-bottom: 30px;
+}
+
+input[type=submit] {
+    display: block;
+    width: 100%;
+    border: none;
+    border-color: transparent;
+    background-color: orange;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+
+input[type=submit]:hover {
+    background-color: orangered;
 }

@@ -167,7 +167,7 @@ input[type=submit]:hover {
 .steps {
     margin-top: 60px;
 }
-.steps:last-child {
+.steps:last-of-type {
     margin-top: 25px;
 }
 
@@ -175,7 +175,22 @@ img {
     height: 35px;
     width: 35px;
     position: absolute;
+    display: none;
 }
+
+#loader1 {
+    margin-top: 55px;
+}
+#loader2 {
+    margin-top: 150px;
+}
+#loader3 {
+    margin-top: 245px;
+}
+#loader4 {
+    margin-top: 305px;
+}
+
 
 #complete-percent {
     border-radius: 100%;

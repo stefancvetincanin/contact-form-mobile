@@ -24,7 +24,7 @@
     <form>
         <div class="form-header">
             <div class="prva-kolona">
-
+                <div id="complete-percent">0%</div>
             </div>
             <div class="druga-kolona">
                 <p>New York State</p>
@@ -33,18 +33,28 @@
         </div>
         <div class="form-body">
             <div class="prva-kolona">
-
+                <img src="media/images/loader.gif" alt="">
+                <div class="steps">1</div>
+                <div class="steps">2</div>
+                <div class="steps">3</div>
+                <div class="steps">4</div>
             </div>
             <div class="druga-kolona">
-                <label for="name">First Name</label>
-                <input type="text" id="name" placeholder="First Name">
-                <hr>
-                <label for="surname">Last Name</label>
-                <input type="text" id="surname" placeholder="Last Surname">
-                <hr>
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Email Address">
-                <hr>
+                <div class="input-container">
+                    <input type="text" id="name" required>
+                    <label for="name" class="ph-label" id="lbl-name">First Name</label>
+                    <hr>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="surname" required>
+                    <label for="surname" class="ph-label" id="lbl-surname">Last Name</label>
+                    <hr>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" required>
+                    <label for="email" class="ph-label" id="lbl-email">Email Address</label>
+                    <hr>
+                </div>
                 <p>What is the best time to contact you?</p>
                 <input type="checkbox" name="contact-time" value="monday" id="check-monday">
                 <label for="check-monday" class="lbl-check">Monday 3pm</label><br>

@@ -2,6 +2,11 @@
     font-family: "Roboto";
 }
 
+body {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
 .form-header, .form-body {
     display: flex;
 }
@@ -23,21 +28,50 @@
 
 .prva-kolona {
     flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .druga-kolona {
     flex-basis: 80%;
+    position: relative;
 }
 
 .form-body {
-    padding-top: 20px;
+    /* padding-top: 20px; */
     padding-right: 15px;
     color: #c7c7c7;
     background-color: #fafafa;
 }
 
-label {
+/* label {
     font-size: 0.8rem;
+} */
+
+.input-container {
+    position: relative;
+}
+
+.ph-label {
+    font-size: 1.1rem;
+    position: absolute;
+    height: 35px;
+    line-height: 33px;
+    top: 0px;
+    bottom: 0px;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+input[type=text]:focus +label, input[type=email]:focus +label {
+    font-size: 0.8rem;
+    top: -25px;
+}
+input[type=text]:valid +label, input[type=email]:valid +label {
+    font-size: 0.8rem;
+    top: -25px;
 }
 
 .lbl-check {
@@ -52,12 +86,34 @@ input[type=text], input[type=email] {
     /* border-radius: 0px; */
     border: none;
     border-color: transparent;
-
+    color: #9a8675;
+    margin-top: 55px;
+    height: 34px;
+    line-height: 32px;
 }
+
+input[type=text]:focus, input[type=email]:focus {
+    color: #2196f3;
+    outline: none;
+}
+#name:focus .ph-label {
+    font-size: 0.8rem;
+}
+
 
 hr {
     width: 100%;
-    margin: 8px 0 30px;
+    margin: 8px 0 -2px;
+    /* background-color: #d8d0c7; */
+    border-top: 1px solid #d8d0c7;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+input[type=text]:focus ~hr, input[type=email]:focus ~hr {
+    width: 60%;
+    border-top: 1px solid #68b5f5;
+    /* background-color: #68b5f5; */
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -91,3 +147,50 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: orangered;
 }
+
+.steps {
+    border-radius: 100%;
+    border: 1px solid rgb(240, 240, 240);
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 33px;
+    color: #2196f3;
+    box-shadow: 0px 2px 2px lightgray;
+    background-color: white;
+}
+
+.steps:first-of-type {
+    margin-top: 55px;
+}
+
+.steps {
+    margin-top: 60px;
+}
+.steps:last-child {
+    margin-top: 25px;
+}
+
+img {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+}
+
+#complete-percent {
+    border-radius: 100%;
+    border: 2px solid rgb(243, 241, 241);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    color: white;
+    /* box-shadow: 0px 2px 2px lightgray; */
+    background-color: #2196f3;
+    margin-top: 18px;
+}
+
+.form-body p {
+    margin-top: 21px;
+}
+

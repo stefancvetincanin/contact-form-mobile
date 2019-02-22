@@ -74,8 +74,9 @@ input[type=text]:valid +label, input[type=email]:valid +label {
     top: -25px;
 }
 
-.lbl-check {
-    color: #9a8675;
+.ph-label-invalid {
+    font-size: 0.8rem;
+    top: -25px;
 }
 
 input[type=text], input[type=email] {
@@ -125,27 +126,102 @@ input[type=text]:focus ~hr, input[type=email]:focus ~hr {
     color: #9b9b9c;
 }
 
-input[type=checkbox] {
-    margin-right: 12px;
+/* 
+    Styling the radio buttons
+*/
+
+.lbl-check {
+    color: #9a8675;
+    position: relative;
+    padding-left: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
 
-#check-tuesday {
-    margin-bottom: 30px;
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    border: 1px solid #d3cccc;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.checkmark:after {
+    content: "\2714";
+    font-size: 15px;
+    position: absolute;
+    display: none;
+}
+
+input[type=radio]:checked ~ .checkmark {
+    background-color: #69e9ad;
+    animation: check-ani 1s;
+}
+
+input[type=radio]:checked ~ .checkmark:after {
+    display: block;
+    text-align: center;
+    width: 20px;
+    color: white;
+}
+
+@keyframes check-ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    33% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    66% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* 
+    Styling the submit
+*/
 
 input[type=submit] {
     display: block;
-    width: 100%;
+    width: 80%;
     border: none;
     border-color: transparent;
     background-color: orange;
     color: white;
     padding-top: 8px;
     padding-bottom: 7px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 input[type=submit]:hover {
     background-color: orangered;
+}
+input[type=submit]:active, input[type=submit]:hover {
+    outline: none;
 }
 
 .steps {
@@ -191,10 +267,9 @@ img {
     margin-top: 305px;
 }
 
-
 #complete-percent {
-    border-radius: 100%;
-    border: 2px solid rgb(243, 241, 241);
+    border-radius: 50%;
+    border: 2px solid rgb(128, 207, 207);
     height: 40px;
     width: 40px;
     text-align: center;
@@ -203,9 +278,31 @@ img {
     /* box-shadow: 0px 2px 2px lightgray; */
     background-color: #2196f3;
     margin-top: 18px;
+    font-size: 14px;
+}
+
+.progress-container {
+    position: absolute;
+    /* top: 0px; */
+    /* left: 0px; */
+    opacity: 1;
+    margin: 18px auto 0;
+}
+
+#progress-bar {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    stroke-dasharray: 119, 119;
+    stroke-dashoffset: 119;
+}
+
+.progress-transition {
+    -webkit-transition: stroke-dashoffset 0.35s;
+    transition: stroke-dashoffset 0.35s;
 }
 
 .form-body p {
     margin-top: 21px;
 }
-

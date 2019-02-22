@@ -21,10 +21,13 @@
 </head>
 
 <body>
-    <form>
+    <form id="contact-form">
         <div class="form-header">
             <div class="prva-kolona">
                 <div id="complete-percent">0%</div>
+                <svg class="progress-container" height="40" width="40">
+                        <circle id="progress-bar" cx="20" cy="20" r="19" stroke="white" stroke-width="2" fill="white" fill-opacity="0"/>
+                </svg>
             </div>
             <div class="druga-kolona">
                 <p>New York State</p>
@@ -59,10 +62,18 @@
                     <hr>
                 </div>
                 <p>What is the best time to contact you?</p>
-                <input type="checkbox" name="contact-time" value="monday" id="check-monday">
-                <label for="check-monday" class="lbl-check">Monday 3pm</label><br>
-                <input type="checkbox" name="contact-time" value="tuesday" id="check-tuesday">
-                <label for="check-tuesday" class="lbl-check">Tuesday 3pm</label><br>
+
+                <label for="check-monday" class="lbl-check">
+                    Monday 3pm
+                    <input type="radio" name="contact-time" value="monday" id="check-monday" required>
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label for="check-tuesday" class="lbl-check">
+                    Tuesday 3pm
+                    <input type="radio" name="contact-time" value="tuesday" id="check-tuesday" required>
+                    <span class="checkmark"></span>
+                </label>
                 <input type="submit">
             </div>
         </div>
